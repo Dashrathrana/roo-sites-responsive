@@ -50,15 +50,16 @@ body {
   font-size: 18px;
   font-weight: 800;
   border-radius: 5px;
+  transition: all 300ms ease-in-out;
+  padding: 13px 30px;
+  border-radius: 30px;
+
 }
 
 .nav ul li a:hover,
 .nav ul li a.active {
   background: white;
   color: black;
-  padding: 13px 30px;
-  border-radius: 30px;
-  transition: all 0.4sec;
 }
 
 .nav-top-icons{
@@ -67,7 +68,7 @@ body {
 }
 
 .nav-top-icons a i{
-  font-size: 45px;
+  font-size: 2rem;
   color: white;
   margin-right: 5px;
 }
@@ -168,18 +169,18 @@ body {
 
 .text-item p {
   color: white;
-  font-size: 25px;
+  font-size: 24px;
   text-align: justify;
-  font-family: "Abril Fatface", cursive;
+  font-family: 'DM Serif Text', serif;
   line-height: 35px;
 }
 
 .text-item h2 {
   color: white;
-  font-family: "Abril Fatface", cursive;
-  font-weight: 500;
-  font-size: 26px;
+  font-family:'DM Serif Text', serif;
+  font-size: 27px;
   margin-bottom: 15px;
+  font-weight: 500;
 }
 
 .button-element {
@@ -207,7 +208,8 @@ body {
 
 .about:hover {
   background-color: black;
-  transition: 0.3s;
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 .free-estimate {
@@ -225,7 +227,8 @@ body {
 
 .free-estimate:hover {
   background-color: black;
-  transition: all 0.3s;
+  transition: all 0.4s;
+  cursor: pointer;
 }
 
 .free-estimate img {
@@ -242,12 +245,12 @@ body {
 .element-section-two {
   margin: auto;
   width: 100%;
-  height: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 30px;
+  width: 80%;
   
 }
 
@@ -255,34 +258,58 @@ body {
   font-size: 28px;
   color: #005daa;
   position: relative;
-  left: 27px;
-  bottom: 30px;
-  font-family: Tiro Devanagari Hindi", serif;
+  font-family: "Tiro Devanagari Hindi", serif;
+  margin-bottom: 16px;
 }
 
 .icon-container {
-  width: 80%;
-  height: auto;
+  width: 100%;
   display: flex;
   flex-direction: row;
   padding: 20px;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .items {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
- 
+  text-align: center;
+  flex-basis: 20%;
+  margin-bottom: 34px;
+}
+.items a{
+  display: block;
+}
+.items a > span{
+  display: block;
+  margin-bottom: 16px;
 }
 
-.items p a {
+.items a > span:last-child{
+  font-size: 1rem;
+}
+
+.items a:first-child{
+  margin-bottom: 16px;
+}
+.items a i {
+  font-size: 3rem;
+}
+
+.items a {
   text-decoration: none;
   color: #005daa;
   position: relative;
+  transition: color 300ms ease-in-out;
   font-family: "Tiro Devanagari Hindi", serif;
   top: 20px;
+}
+.items a:hover{
+  color: #023c6c
 }
 
 /*----------------styling section three start here--------------------------------------------------------------------------------------*/
@@ -370,7 +397,8 @@ body {
 
 .view-button:hover {
   background-color: black;
-  transition: all 0.3s;
+  transition: all 0.4s;
+  cursor: pointer;
 }
 
 .view-button img {
@@ -386,6 +414,7 @@ body {
 .points-item img{
   margin-left: 5px;
 }
+
 
 /*----------------section four(main body) styling start her----------------------*/
 .element-section-container {
@@ -626,6 +655,7 @@ body {
     width: 100%;
     background: #005daa;
     text-align: center;
+    z-index: 999;
   }
 
   #click:checked ~ .menu-btn i:before {
@@ -634,13 +664,15 @@ body {
 
   #click:checked ~ ul {
     left: 0%;
+    width: 100%;
   }
 
   .nav ul li {
     display: block;
     padding: 16px 0px;
     text-align: center;
-   
+    border-top: 1px solid #023c6c;
+    width: 100%;   
   }
 
   .nav ul li a:hover,
@@ -673,15 +705,16 @@ body {
   }
 
   .text-item p{
-    font-size: 23px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.3em;
     padding: 10px;
+    letter-spacing: 1px;
   }
 
   .text-item h2 {
     font-weight: 400;
-    font-size: 22px;
+    font-size: 2rem;
     padding: 10px;
   }
 
@@ -723,6 +756,18 @@ body {
     flex-direction: column;
   }
 
+  .button-element .about{
+    cursor: pointer;
+  }
+
+  .button-element .free-estimate{
+    cursor: pointer;
+  }
+
+  .view-button{
+   cursor: pointer;
+  }
+
   .element-section-container{
     width: 100%;
     height: auto;
@@ -752,6 +797,10 @@ body {
     padding: 10px;
     display: flex;
     flex-direction: column;
+  }
+
+  .item-container h3{
+    padding-top: 20px;
   }
 
   .two-button-container {
@@ -794,14 +843,20 @@ body {
 
   .icon-container{
     margin: auto;
-    flex-direction: column;
+    flex-direction: initial;
+    flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
-    padding: 5px;
+    width: 100%;
+  }
+
+  .icon-container .items{
+    flex-basis: 50%;
+    margin-bottom: 24px;
   }
   
   .items a i{
-   margin-top: 30px;
+    font-size: 2.5rem;
    }
 
   .more-container{
@@ -867,11 +922,11 @@ body {
   
   .bottom-text h2 {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 22px;
   }
 
   .bottom-text a{
-    line-height: 1.3em;
+    line-height: 1.5em;
    
   }
 
@@ -940,7 +995,7 @@ margin-left:3px;
 } */
 
 .nav-top-icons a i{
-font-size: 34px;
+font-size: 24px;
 color: white;
 margin-right: 4px;
 }
@@ -987,7 +1042,6 @@ margin-right: 4px;
   font-size: 26px;
   font-weight: 600;
   position: relative;
-  right: 10px;
 }
 
 .icon-container{
